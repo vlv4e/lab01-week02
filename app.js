@@ -29,9 +29,15 @@ Example: isAdult(21) should return 'Adult'.
 Complete the exercise in the space below:
 */
 
+function isAdult(age){
+    if (age >= 18){
+        console.log(`your age is ${age}, you are an adult.`)}
+        else{
+            console.log(`your age is ${age}, you are a minor.`)
+        }
+}
 
-
-console.log('Exercise 2 Result:', isAdult(21));
+console.log(isAdult(23));
 
 /*
 Exercise 3: isCharAVowel()
@@ -46,10 +52,18 @@ Example: isCharAVowel('a') should return true.
 Complete the exercise in the space below:
 */
 
+function isCharAVowel(character){
+    if (character === "a" || character === "u"|| character === "i"|| character === "o"|| character === "e"){
+        console.log('true')
+    }
+    else{
+        console.log('false')
+    }
 
+}
 
-console.log('Exercise 3 Result:', isCharAVowel("a"));
-
+console.log(isCharAVowel("a"));
+console.log(isCharAVowel("m"));
 /*
 Exercise 4: generateEmail()
 
@@ -61,10 +75,14 @@ should return 'johnsmith@example.com'.
 
 Complete the exercise in the space below:
 */
+function generateEmail(name,domain){
+    return `${name}@${domain}.com`
+
+}
 
 
-
-console.log('Exercise 4 Result:', generateEmail("johnsmith", "example.com"));
+console.log(generateEmail('muhannad','live'))
+console.log(generateEmail('johnsmith','icloud'))
 
 /*
 Exercise 5: greetUser()
@@ -77,10 +95,27 @@ Example: greetUser('Sam', 'morning') should return "Good morning, Sam!"
 
 Complete the exercise in the space below:
 */
+function greetUser(name,timeOfDay){
+    if (timeOfDay === "morning"){
+        console.log(`Good Morning, ${name}`)
+    }
+    else if (timeOfDay === "afternoon"){
+        console.log(`Good afternoon, ${name}`)
+    }
+    else if (timeOfDay === "evening"){
+        console.log(`Good evening, ${name}`)
+    }
+    else{
+        console.log(`do you even know what time it is ${name}?`)
+    }
+
+}
 
 
-
-console.log('Exercise 5 Result:', greetUser("Sam", "morning"));
+console.log(greetUser("Muhannad", "morning"));
+console.log(greetUser("Muhannad", "afternoon"));
+console.log(greetUser("Muhannad", "evening"));
+console.log(greetUser("Muhannad", ""));
 
 /*
 Exercise 6: maxOfThree()
