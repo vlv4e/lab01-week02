@@ -7,7 +7,7 @@ If they're equal, return either one.
 
 Exercise 1 has been completed for you:
 */
-
+console.log('----- exersice 1 -----')
 const maxOfTwoNumbers = (x, y) => {
     if (x >= y) {
       return x;
@@ -16,7 +16,7 @@ const maxOfTwoNumbers = (x, y) => {
     }
   }
   
-  console.log('Exercise 1 Result:', maxOfTwoNumbers(3, 9));
+  console.log(maxOfTwoNumbers(3, 9));
   
   /*
 Exercise 2: isAdult()
@@ -28,16 +28,16 @@ Example: isAdult(21) should return 'Adult'.
 
 Complete the exercise in the space below:
 */
-
+console.log('----- exersice 2 -----')
 function isAdult(age){
     if (age >= 18){
-        console.log(`your age is ${age}, you are an adult.`)}
+        return(`your age is ${age}, you are an adult.`)}
         else{
-            console.log(`your age is ${age}, you are a minor.`)
+            return(`your age is ${age}, you are a minor.`)
         }
 }
-
-console.log(isAdult(23));
+console.log(isAdult(23))
+console.log(isAdult(11))
 
 /*
 Exercise 3: isCharAVowel()
@@ -51,19 +51,18 @@ Example: isCharAVowel('a') should return true.
 
 Complete the exercise in the space below:
 */
-
+console.log('----- exersice 3 -----')
 function isCharAVowel(character){
     if (character === "a" || character === "u"|| character === "i"|| character === "o"|| character === "e"){
-        console.log('true')
+        return('true')
     }
     else{
-        console.log('false')
+        return('false')
     }
+};
+console.log(isCharAVowel("a"))
+console.log(isCharAVowel("m"))
 
-}
-
-console.log(isCharAVowel("a"));
-console.log(isCharAVowel("m"));
 /*
 Exercise 4: generateEmail()
 
@@ -75,12 +74,12 @@ should return 'johnsmith@example.com'.
 
 Complete the exercise in the space below:
 */
+
+console.log('----- exersice 4 -----')
 function generateEmail(name,domain){
     return `${name}@${domain}.com`
 
 }
-
-
 console.log(generateEmail('muhannad','live'))
 console.log(generateEmail('johnsmith','icloud'))
 
@@ -95,23 +94,22 @@ Example: greetUser('Sam', 'morning') should return "Good morning, Sam!"
 
 Complete the exercise in the space below:
 */
+console.log('----- exersice 5 -----')
 function greetUser(name,timeOfDay){
     if (timeOfDay === "morning"){
-        console.log(`Good Morning, ${name}`)
+        return(`Good Morning, ${name}`)
     }
     else if (timeOfDay === "afternoon"){
-        console.log(`Good afternoon, ${name}`)
+        return(`Good afternoon, ${name}`)
     }
     else if (timeOfDay === "evening"){
-        console.log(`Good evening, ${name}`)
+        return(`Good evening, ${name}`)
     }
     else{
-        console.log(`do you even know what time it is ${name}?`)
+        return(`do you even know what time it is ${name}?`)
     }
 
 }
-
-
 console.log(greetUser("Muhannad", "morning"));
 console.log(greetUser("Muhannad", "afternoon"));
 console.log(greetUser("Muhannad", "evening"));
@@ -127,10 +125,24 @@ Example: maxOfThree(17, 4, 9) should return 17.
 
 Complete the exercise in the space below:
 */
+console.log('----- exersice 6 -----')
+function maxOfThree(num1,num2,num3){
+    if(num1>num2 && num1>num3){
+        return num1
+    }
+    else if(num2>num1 && num2>num3){
+        return num2
+    }
+    else if(num3>num1 && num3>num2){
+        return num3
+    }
+    else{
+        console.log('all numbers are equal')
+    }
+}
 
-
-
-console.log('Exercise 6 Result:', maxOfThree(5, 10, 8));
+console.log(`the largest number is ` + maxOfThree(5, 10, 8));
+console.log(`the largest number is ` + maxOfThree(93, 10, 8));
 
 /*
 Exercise 7: calculateTip()
@@ -143,10 +155,13 @@ Example: calculateTip(50, 20) should return 10.
 
 Complete the exercise in the space below:
 */
+console.log('----- exersice 7 -----')
+function calculateTip(billAmount, tipPercentage){
+    return(`the amount of the tip is ${billAmount * tipPercentage/100}`)
 
+}
 
-
-console.log('Exercise 7 Result:', calculateTip(50, 20));
+console.log(calculateTip(50, 20));
 
 /*
 Exercise 8: convertTemperature()
@@ -161,10 +176,18 @@ Example: convertTemperature(32, 'F') should return 0 (Celsius).
 
 Complete the exercise in the space below:
 */
+console.log('----- exersice 8 -----')
+function convertTemperature(temperature,scale){
+    if(scale === "C"){
+        return temperature = (temperature * 9/5 ) + 32;
+    }
+    else if (scale === "F") {
+        return temperature = (temperature - 32) * 5/9;
+    }
+}
+console.log(convertTemperature(32, "C"))
+console.log(convertTemperature(32, "F"))
 
-
-
-console.log('Exercise 8 Result:', convertTemperature(32, "C"));
 
 /*
 Exercise 9: basicCalculator()
@@ -181,7 +204,23 @@ Example: basicCalculator(10, 5, 'subtract') should return 5.
 
 Complete the exercise in the space below:
 */
+console.log('----- exersice 9 -----')
+function basicCalculator(number1,number2,operation){
+    if(operation === "subtract"){
+        return `the subtraction of ${number1} and ${number2} is ${number1 - number2}` 
+    }
+    else if(operation === "add"){
+        return `the addition of ${number1} and ${number2} is ${number1 + number2}` 
+    }
+    else if(operation === "multiply"){
+        return `the multiplication of ${number1} and ${number2} is ${number1 * number2}`
+    }
+    else if(operation === "divide"){
+        return `the division of ${number1} and ${number2} is ${number1 / number2}`
+    }
+}
 
-
-
-console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
+console.log( basicCalculator(10, 5, "subtract"));
+console.log( basicCalculator(10, 5, "add"));
+console.log( basicCalculator(10, 5, "multiply"));
+console.log( basicCalculator(10, 5, "divide"));
